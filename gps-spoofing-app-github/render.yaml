@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gps-spoofing-detector
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.10.0
