@@ -279,7 +279,7 @@ export default function Home() {
             : `[LIVE OK] SATELLITE PRN ${prnVal} (${cn0Val} dB-Hz) AUTHENTIC. Accepted into navigation filter.`;
 
           setStreamLog((prev) => [
-            `[${res.timestamp || new Date().toLocaleTimeString()}] Live Telemetry -> ${actionStr}`,
+            `[${new Date().toLocaleTimeString()}] Live Telemetry -> ${actionStr}`,
             ...prev.slice(0, 7)
           ]);
         }
