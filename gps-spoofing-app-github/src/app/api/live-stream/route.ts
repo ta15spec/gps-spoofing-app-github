@@ -64,10 +64,9 @@ export async function GET() {
 
   const result = predictSignal(data);
 
-  return NextResponse.json({
-    status: 'success',
-    ...result,
-    telemetryData: data,
-    timestamp: new Date().toLocaleTimeString()
-  });
+ return NextResponse.json({
+  ...result,
+  telemetryData: data,
+  timestamp: new Date().toLocaleTimeString()
+});
 }
